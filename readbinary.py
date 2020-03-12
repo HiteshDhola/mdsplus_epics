@@ -22,7 +22,7 @@ print(time_conv)
 print("\n Time Stamp (64 bit) ","%d" %time_stamp)
 print("\n Shot taken on", time.ctime(to_seconds(1460000000100000000)))
 
-#3614846037-‭2082911364‬=1531934673 (1904-1970) #2082844800
+# (1904 to 1970) 3614846037-2082844800 =
 
 from datetime import datetime
 
