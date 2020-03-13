@@ -1,5 +1,6 @@
 import numpy
 import matplotlib.pyplot as plt
+import matplotlib.dates as md
 import time
 import datetime
 from datetime import datetime
@@ -18,7 +19,7 @@ array=numpy.split(data,6) #split 2d array in 6 single arrays
 array[0]=array[0].astype(numpy.int64) # convert array to int64 datatype
 array[5]=array[5]-2082844800000000000 # (1904 to 1970) in seconds 2082844800
 array[5]=array[5].astype(numpy.int64) # convert array to int64 datatype
-
+ts_array_float=numpy.divide(array[5],1e9)
 # print arrays
 print("Configuration \t",array[0])
 print("Voltage \t \t", array[1])
@@ -45,7 +46,13 @@ print("Shot Ended on", ts_end_dt)
 print("Shot length", ts_end_float-ts_float)
 
 #plot data
-plt.plot(array[5],array[1])
+datenums=md.date2num(ts_array_float)
+plt.subplots_adjust(bottom=0.2)
+plt.xticks(rotation=25)
+ax=plt.gca()
+xfmt = md.DateFormatter('%Y-%m-%d %H:%M:%S')
+ax.xaxis.set_major_formatter(xfmt)
+plt.plot(datenums,array[1])
 plt.show()
 
 
