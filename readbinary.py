@@ -1,6 +1,8 @@
 import numpy
+import matplotlib.pyplot as plt
 import time
 import datetime
+from datetime import datetime
 
 def to_seconds(h):
    return (h>>32) + ((float)(h&0xffffffff))/pow(2,32)
@@ -25,6 +27,7 @@ print("DC Link \t \t", array[3])
 print("Duty Cycle \t \t", array[4])
 print("Time Stamps \t", array[5])
 
+#Extracting timestamps
 ts_64bit= array[5][0]
 ts_end=array[5][size-1]
 print(ts_end)
@@ -35,16 +38,18 @@ print("\nTime Stamp (64 bit) ","%19d" %ts_64bit)
 print("Start Time Stamp (float) ","%.9f" %ts_float)
 print("  End Time Stamp (float) ","%.9f" %ts_end_float)
 
-
-from datetime import datetime
 ts_dt=datetime.fromtimestamp(ts_float)
 print("Shot taken on", ts_dt)
 ts_end_dt=datetime.fromtimestamp(ts_end_float)
 print("Shot Ended on", ts_end_dt)
 print("Shot length", ts_end_float-ts_float)
 
+#plot data
+plt.plot(array[5],array[1])
+plt.show()
 
 
+#Current Time
 time2 = datetime.now().timestamp()
 print(" \nCurrent Time\n",time2)
 print(datetime.now())
