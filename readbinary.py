@@ -46,14 +46,7 @@ print("Shot Ended on", ts_end_dt)
 print("Shot length", ts_end_float-ts_float)
 
 #plot data
-datenums=md.date2num(ts_array_float)
-plt.subplots_adjust(bottom=0.2)
-plt.xticks(rotation=25)
-ax=plt.gca()
-xfmt = md.DateFormatter('%Y-%m-%d %H:%M:%S')
-ax.xaxis.set_major_formatter(xfmt)
-plt.plot(datenums,array[1])
-plt.show()
+
 
 
 #Current Time
