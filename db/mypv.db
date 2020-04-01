@@ -1,0 +1,83 @@
+record(ai, "random:ai") 
+{ 
+	field(DESC, "demo ai PV") 
+	field(PINI, "YES") 
+	field(EGU, "cm") 
+	field(MDEL, "1")
+}
+record(aai, "cosine:waveDouble")
+{ 
+	field(DESC, "demo double array PV") 
+	field(PINI, "YES") 
+	field(NELM, "10") 
+	field(FTVL, "DOUBLE")
+}
+
+record(aai, "sinewave:waveDouble")
+{ 
+	field(DESC, "demo double array PV") 
+	field(PINI, "YES") 
+	field(NELM, "10") 
+	field(FTVL, "DOUBLE")
+}
+
+record(aai, "sawtooth:waveDouble")
+{ 
+	field(DESC, "demo double array PV") 
+	field(PINI, "YES") 
+	field(NELM, "10") 
+	field(FTVL, "DOUBLE")
+}
+
+record(bi, "squarewave:bi")
+{ 
+	field(DESC, "demo bi PV") 
+	field(ONAM, "ok")
+	field(OSV, "NO_ALARM")
+	field(ZNAM, "IN_ALARM")
+	field(ZSV, "MAJOR")
+}
+
+
+record(ao, "dataout:ao") 
+{ 
+	field(DESC, "demo ao PV") 
+	field(PINI, "YES") 
+	field(EGU, "cm") 
+	field(HIHI, "200") 
+	field(HIGH, "100") 
+	field(LOW, "50") 
+	field(LOLO, "10") 
+	field(HHSV, "MAJOR") 
+	field(HSV, "MINOR") 
+	field(LSV, "MINOR") 
+	field(LLSV, "MAJOR")
+}
+
+record(aai, "xyz:waveDouble")
+{ 
+	field(DESC, "demo double array PV") 
+	field(PINI, "YES") 
+	field(NELM, "2000") 
+	field(FTVL, "DOUBLE")
+}
+record(bi, "datain:bi") 
+{ 
+	field(DESC, "demo bi PV") 
+	field(ONAM, "1")
+	field(ZNAM, "0")
+}
+record(bi, "onlinedata:bi") 
+{ 
+	field(DESC, "demo bi PV") 
+	field(ONAM, "1")
+	field(ZNAM, "0")
+}
+
+
+record(bi, "offlinedata:bi") 
+{ 
+	field(DESC, "demo bi PV") 
+	field(ONAM, "1")
+	field(ZNAM, "0")
+}
