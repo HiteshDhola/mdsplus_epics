@@ -69,7 +69,7 @@
 ```
   5. Start Event.py python script on new terminal
      - Set tree environment as $ export my_tree_path=/[path of tree]
-     - Run  event.py python script at folder path /home/codac-dev/vijay/mdsplus_epics/codac/py by following command
+     - Run  event.py python script at folder path /home/codac-dev/vijay/mdsplus_epics/codac/py/ by following command
        - $ python event.py startT
      - startT is passing event argument
 ```
@@ -80,6 +80,34 @@
     root @ localhost.localdomain : /home/codac-dev/vijay/mdsplus_epics/codac/py $ python event.py startT
     
 ```
-    
+  6. Start online.py python script on new terminal
+     - Run  online.py python script at folder path /home/codac-dev/vijay/mdsplus_epics/codac/py/
+       - $ python online.py
+```     
+  root @ localhost.localdomain : /home/codac-dev/vijay/mdsplus_epics/codac/py $ python online.py
+  Now wait for changes
+  PV Changed!  onlinedata:bi.VAL 0
+  CA.Client.Exception...............................................
+  	Warning: "Identical process variable names on multiple servers"
+  	Context: "Channel: "onlinedata:bi.VAL", Connecting to: 192.168.23.145:5064, Ignored: localhost.localdomain:5064"
+  	Source File: ../cac.cpp line 1320
+  	Current Time: Tue Mar 08 2022 16:02:38.456985409
+  ..................................................................
+  
+```
+ 7. Start offline.py python script on new terminal
+     - Run  offline.py python script at folder path /home/codac-dev/vijay/mdsplus_epics/codac/py/
+       - $ python offline.py
+```
+  root @ localhost.localdomain : /home/codac-dev/vijay/mdsplus_epics/codac/py $ python offline.py
+  Now wait for changes
+  PV Changed!  offlinedata:bi.VAL 0 Tue Mar  8 10:55:58 2022
+  CA.Client.Exception...............................................
+  	Warning: "Identical process variable names on multiple servers"
+	  Context: "Channel: "offlinedata:bi.VAL", Connecting to: 192.168.23.145:5064, Ignored: localhost.localdomain:5064"
+	  Source File: ../cac.cpp line 1320
+  	Current Time: Tue Mar 08 2022 10:55:58.758974483
+..................................................................
 
+```
    
