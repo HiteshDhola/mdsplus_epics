@@ -1,4 +1,11 @@
 # LabVIEW mdsplus and epics interface
+## Procedure to start to send to epics server(in Linux) from labview( in windows) and save data in mdsplus server tree with shot number through python script( in linux)
+
+## Labview side (windows)
+ - We are using Labview program to generate the data and store in binary file with filename of timestamps in local disk
+ - Using the CA lab library in the Labview program, generated and stored data in binary files are transferred to the EPICS server. 
+ - When we press the Start_Archiving button in Labview GUI , it will start to send online generated data (with ‘Onlinedata:bi’ PV for automatic start the python script) to their associated process variable to epics server for 10 seconds and also saves the data in binary file with filename of timestamps in local disk after that it will send all data to EPICS server  in offline mode with timestamps through associated process variable (with ‘Offlinedata:bi’ PV for automatic start the python script) for 2 seconds.
+
 ## Instruction  to start MDSplus server , EPICS server and python scripts to store data in MDSplus database
 1. Start MDSplus server at port 8000 at mdsip.hosts file path in root account.
    - In our case mdsip.hosts file at /usr/local/mdsplus/bin and Run command as per below in new terminal
