@@ -23,13 +23,24 @@ def test_var_args_call(arg1, arg2, arg3):
     print("Everything is completed")
 
 
-
-
-
-f = open('shot_no.bin','rb')
+f = open('shot_no.bin','r')
 data = f.read()
-#f.close()
-data = float(data)
+f.close()
+#data = float(data)
 shot_no = int(data)
+shot_no=shot_no+1
+
+
+#f = open('shot_no.bin','rb')
+#data = f.read()
+#f.close()
+#data = float(data)
+#shot_no = int(data)
 kwargs = {"arg3": shot_no, "arg2": "finalpv"}
 test_var_args_call("hello_this_start_event", **kwargs)
+
+shot_no1=shot_no
+shot_no1=str(shot_no1)
+f = open('shot_no.bin','w')
+f.write(shot_no1)
+f.close

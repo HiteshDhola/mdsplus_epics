@@ -17,6 +17,7 @@ mypv.add_callback(onChanges)
 print 'Now wait for changes'
 
 t0 = time.time()
-while time.time() - t0 < 12220.0:
+#while time.time() - t0 < 12220.0:
+while 1:
 	time.sleep(1.e-3)
 print 'Done.'
