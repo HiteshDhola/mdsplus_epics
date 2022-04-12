@@ -40,17 +40,19 @@ print("sinewave \t \t", sinewave)
 print("cosinewave \t \t", cosine)
 print("random \t \t", random_int64)
 print("sawtooth \t \t", sawtooth)
-print("timestamp \t \t", timestamp)
+print("timestamp \t \t", float64(timestamp))
 
 
 ##################PRINT INDIVIDUAL ARRAY  WITH X_AXIS AS TIMESTAMP##########################################################
 
 
-#plot(timestamp,sinewave)
-#plot(timestamp,cosine)
-#plot(timestamp,random)
-#plot(timestamp,sawtooth)
+plot(timestamp,sinewave)
+plot(timestamp,cosine)
+plot(timestamp,random)
+plot(timestamp,sawtooth)
 #show()
+for i in range(0,2000):
+    time.sleep(1.e-3)
 
 
 
@@ -59,12 +61,12 @@ print("timestamp \t \t", timestamp)
 ###################MDSPLUS SECTION############################################
 
 ###################Reading shot.no############################################
-f = open('shot_no.bin','rb')
+f = open('shot_no.bin','r')
 shot_no = f.read()
 f.close()
-shot_no = float(shot_no)
+#shot_no = float(shot_no)
 shot_no = int(shot_no)
-
+print(shot_no)
 
 
 ###################CHANNEL_1############################################
